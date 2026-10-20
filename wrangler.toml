@@ -8,3 +8,8 @@ directory = ".output/public"
 not_found_handling = "404-page"
 # Serve /experience from experience/index.html without redirecting to /experience/.
 html_handling = "drop-trailing-slash"
+
+[observability.logs]
+enabled = true
+invocation_logs = false
+persist = true

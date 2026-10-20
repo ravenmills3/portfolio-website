@@ -14,6 +14,12 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/i18n", ...(isDev ? ["@nuxt/a11y"] : [])],
   css: ["~/assets/css/main.css"],
   colorMode: { preference: "system", fallback: "light" },
+  // Bundle every icon used; the static site has no icon endpoint and the CSP blocks Iconify's API.
+  icon: {
+    provider: "none",
+    fallbackToApi: false,
+    clientBundle: { scan: true },
+  },
 
   fonts: {
     families: [

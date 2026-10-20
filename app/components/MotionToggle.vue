@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Pause or play every animation on the site (WCAG 2.2.2). Pressed means animations are on.
-const { t } = useI18n()
-const { enabled, setEnabled } = useMotionPref()
+const { t } = useI18n();
+const { enabled, setEnabled } = useMotionPref();
 </script>
 
 <template>
@@ -9,7 +9,7 @@ const { enabled, setEnabled } = useMotionPref()
     color="neutral"
     variant="ghost"
     size="lg"
-    :icon="enabled ? 'i-lucide-sparkles' : 'i-lucide-pause'"
+    :icon="enabled ? 'i-lucide-play' : 'i-lucide-pause'"
     :aria-pressed="enabled"
     :aria-label="t('settings.animations')"
     :title="t('settings.animations')"
