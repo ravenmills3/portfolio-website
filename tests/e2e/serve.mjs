@@ -1,4 +1,4 @@
-// Static preview that mimics Cloudflare Pages: clean URLs and a 404.html fallback.
+// Static preview that mimics wrangler.toml: clean URLs, trailing slashes dropped, 404.html fallback.
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
@@ -33,7 +33,11 @@ async function resolve(pathname) {
 }
 
 createServer(async (req, res) => {
-  const { pathname } = new URL(req.url ?? "/", "http://localhost");
+  const { pathname, search } = new URL(req.url ?? "/", "http://localhost");
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    res.writeHead(307, { location: pathname.replace(/\/+$/, "") + search });
+    return res.end();
+  }
   const file = await resolve(pathname);
   const target = file ?? join(root, "404.html");
   const status = file ? 200 : 404;

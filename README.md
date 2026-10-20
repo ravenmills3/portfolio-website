@@ -8,7 +8,7 @@ Development Portfolio for Raven-Lee Mills created using Nuxt 4, Vue 3, TypeScrip
 | --------------------- | ----------------------------------------------------------------------------------------------- |
 | `pnpm dev`            | Dev server with `@nuxt/a11y` hints                                                              |
 | `pnpm generate`       | Static build into `.output/public`                                                              |
-| `pnpm preview`        | Serve the build like Cloudflare Pages (port 4173)                                               |
+| `pnpm preview`        | Serve the build like Cloudflare does (port 4173)                                                |
 | `pnpm typecheck`      | `vue-tsc` through Nuxt                                                                          |
 | `pnpm test:unit`      | Node's built-in test runner                                                                     |
 | `pnpm test:e2e`       | Builds, then runs Playwright on the installed Chrome                                            |
@@ -38,12 +38,16 @@ The floral tile is drawn with radial gradients only, generated into `app/assets/
 - **Language:** Display site in English, Canadian French and Vietnamese.
 - **Animations:** A pause/play button that stops every animation on the site. It follows the device's reduced-motion setting until changed. A small head script applies it before first paint. With animations off, the flowers show fully open and the petal layer is hidden. The petals also pause while the hero is scrolled out of view.
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare
+
+The site deploys as a Cloudflare Worker with static assets only, no Worker script. `wrangler.toml` holds the settings.
 
 - Build command: `pnpm generate`
-- Output directory: `.output/public`
+- Deploy command: `npx wrangler deploy` (the default)
 - Node: 24 (`.node-version`)
-- Cloudflare serves `404.html` for unknown addresses. `public/_headers` sets security and cache headers. The CSP allows inline scripts and styles because Nuxt writes small inline ones.
+- `nuxt.config.ts` sets Nitro's `static` preset. Without it, Cloudflare's build is detected as a Worker server, and Nitro writes its own Wrangler config, which conflicts with this one.
+- Pages are served without a trailing slash: `/experience/` redirects to `/experience`. Unknown addresses get `404.html` with a 404 status.
+- `public/_headers` sets security and cache headers. The CSP allows inline scripts and styles because Nuxt writes small inline ones.
 
 ## Translations
 
@@ -53,4 +57,4 @@ An empty string in a locale file means "not translated yet": the loaders in `i18
 
 ## In Progress
 
-- Reviewing fr-CA and vi-VN text with a native speaker. Once translations are confirmed, each local will be updated to `translated: true`.
+- Reviewing fr-CA and vi-VN text with a native speaker. Once translations are confirmed, each locale will be updated to `translated: true`.

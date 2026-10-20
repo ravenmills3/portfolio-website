@@ -89,6 +89,8 @@ export default defineNuxtConfig({
   experimental: { viewTransition: true },
 
   nitro: {
+    // Plain static output; stops Cloudflare CI auto-detecting a Worker preset with its own wrangler config.
+    preset: "static",
     serverAssets: [{ baseName: "notes", dir: "./content/notes" }],
     prerender: {
       crawlLinks: true,
