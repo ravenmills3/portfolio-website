@@ -1,3 +1,10 @@
+# Static site served by Workers static assets; no Worker script.
 name = "ravenleemills-dev"
 compatibility_date = "2026-10-01"
-pages_build_output_dir = ".output/public"
+
+[assets]
+directory = ".output/public"
+# Unknown addresses get 404.html with a 404 status.
+not_found_handling = "404-page"
+# Serve /experience from experience/index.html without redirecting to /experience/.
+html_handling = "drop-trailing-slash"
