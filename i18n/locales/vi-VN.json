@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "skip": "Chuyển đến nội dung chính",
+    "home": "trang chủ",
+    "label": "Chính",
+    "menu": "Menu",
+    "openMenu": "Mở menu",
+    "experience": "Kinh nghiệm",
+    "learning": "Học tập",
+    "resume": "Sơ yếu lý lịch",
+    "contact": "Liên hệ"
+  },
+  "settings": {
+    "theme": "Giao diện",
+    "system": "Theo thiết bị",
+    "light": "Sáng",
+    "dark": "Tối",
+    "animations": "Hiệu ứng chuyển động"
+  },
+  "lang": {
+    "label": "Đổi ngôn ngữ"
+  },
+  "footer": {
+    "rights": "© {year} Raven-Lee Mills"
+  },
+  "common": {
+    "present": "Hiện tại",
+    "newTab": "(mở trong thẻ mới)"
+  },
+  "hero": {
+    "role": "Lập trình viên full-stack tại Ottawa",
+    "tagline": "{count} năm kinh nghiệm, tuần nào cũng học thêm điều mới.",
+    "email": "Gửi email cho Raven-Lee",
+    "learning": "Xem tôi đang học gì"
+  },
+  "home": {
+    "aboutTitle": "Giới thiệu",
+    "seeExperience": "Xem kinh nghiệm của tôi",
+    "nowTitle": "Đang học",
+    "nowIntro": "Tôi giữ một danh sách ngắn, có ngày tháng, về những gì mình đang học để thói quen này luôn thật.",
+    "latestTitle": "Ghi chú mới nhất",
+    "allNotes": "Đọc tất cả ghi chú"
+  },
+  "experience": {
+    "title": "Kinh nghiệm",
+    "intro": "Năm năm xây dựng nền tảng web, từ dịch vụ tài chính đến một dự án phi lợi nhuận tình nguyện.",
+    "rolesTitle": "Vị trí",
+    "skillsTitle": "Kỹ năng",
+    "spokenTitle": "Ngôn ngữ giao tiếp",
+    "howTitle": "Cách tôi làm việc"
+  },
+  "learning": {
+    "title": "Học tập",
+    "intro": "Không ngừng tiến bộ là một phần của nghề. Trang này cho thấy điều đó: tôi đang học gì, ghi chép gì và đã đạt được gì.",
+    "since": "Từ {date}",
+    "credentialsTitle": "Học vấn và chứng chỉ",
+    "notesTitle": "Ghi chú học tập",
+    "notesIntro": "Những bài viết ngắn về điều tôi đã thử, điều làm tôi bất ngờ và điều tôi sẽ làm khác đi."
+  },
+  "credentials": {
+    "current": "Đang hiệu lực",
+    "lapsed": "Đã hết hạn"
+  },
+  "notes": {
+    "empty": "Chưa có ghi chú.",
+    "back": "Tất cả ghi chú học tập",
+    "englishOnly": "Chỉ có tiếng Anh",
+    "englishOnlyLong": "Ghi chú này chỉ có bằng tiếng Anh."
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "intro": "Cách nhanh nhất để liên lạc với tôi là qua email. Tôi đọc mọi tin nhắn.",
+    "emailMe": "Gửi email cho Raven-Lee",
+    "copy": "Sao chép địa chỉ email",
+    "copied": "Đã sao chép địa chỉ email",
+    "copyFailed": "Không sao chép được. Địa chỉ là {email}",
+    "elsewhere": "Trên mạng",
+    "where": "Sống tại Ottawa, Ontario, Canada."
+  },
+  "resume": {
+    "hint": "Trang này in ra thành sơ yếu lý lịch một cột. Chọn In, rồi chọn Lưu dưới dạng PDF.",
+    "print": "In hoặc lưu thành PDF",
+    "summary": "Tóm tắt",
+    "skills": "Kỹ năng",
+    "experience": "Kinh nghiệm",
+    "education": "Học vấn và chứng chỉ"
+  },
+  "error": {
+    "code": "Lỗi {code}",
+    "home": "Về trang chủ",
+    "languages": "Đọc trang web này bằng:",
+    "notFound": {
+      "title": "Trang này không tồn tại",
+      "body": "Địa chỉ có thể bị gõ sai hoặc trang đã được chuyển đi. Hãy thử trang chủ hoặc trang học tập."
+    },
+    "badRequest": {
+      "title": "Yêu cầu này không thực hiện được",
+      "body": "Địa chỉ hoặc yêu cầu không hợp lệ. Hãy kiểm tra và thử lại, hoặc bắt đầu từ trang chủ."
+    },
+    "server": {
+      "title": "Đã xảy ra sự cố",
+      "body": "Trang web gặp sự cố khi tải trang này. Hãy tải lại, hoặc bắt đầu từ trang chủ."
+    }
+  },
+  "seo": {
+    "imageAlt": "Raven-Lee Mills, lập trình viên full-stack, cùng một cụm hoa màu hồng",
+    "home": {
+      "title": "Raven-Lee Mills, lập trình viên full-stack tại Ottawa",
+      "description": "Lập trình viên full-stack tại Ottawa với năm năm kinh nghiệm và thói quen học điều mới mỗi tuần."
+    },
+    "experience": {
+      "title": "Kinh nghiệm {'|'} Raven-Lee Mills",
+      "description": "Vị trí, kỹ năng và ngôn ngữ: năm năm xây dựng nền tảng web với React, Next.js, Python và PostgreSQL."
+    },
+    "learning": {
+      "title": "Học tập {'|'} Raven-Lee Mills",
+      "description": "Điều Raven-Lee Mills đang học, cùng học vấn, chứng chỉ và ghi chú học tập."
+    },
+    "resume": {
+      "title": "Sơ yếu lý lịch {'|'} Raven-Lee Mills",
+      "description": "Sơ yếu lý lịch có thể in của Raven-Lee Mills, lập trình viên full-stack và kỹ sư tập sự."
+    },
+    "contact": {
+      "title": "Liên hệ {'|'} Raven-Lee Mills",
+      "description": "Gửi email hoặc kết nối với Raven-Lee Mills, lập trình viên full-stack tại Ottawa."
+    }
+  }
+}

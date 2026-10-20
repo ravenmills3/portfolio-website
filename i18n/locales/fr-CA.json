@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "skip": "Passer au contenu principal",
+    "home": "accueil",
+    "label": "Principale",
+    "menu": "Menu",
+    "openMenu": "Ouvrir le menu",
+    "experience": "Expérience",
+    "learning": "Apprentissage",
+    "resume": "CV",
+    "contact": "Contact"
+  },
+  "settings": {
+    "theme": "Thème",
+    "system": "Selon mon appareil",
+    "light": "Clair",
+    "dark": "Sombre",
+    "animations": "Animations"
+  },
+  "lang": {
+    "label": "Changer de langue"
+  },
+  "footer": {
+    "rights": "© {year} Raven-Lee Mills"
+  },
+  "common": {
+    "present": "Aujourd’hui",
+    "newTab": "(s’ouvre dans un nouvel onglet)"
+  },
+  "hero": {
+    "role": "Développement full-stack à Ottawa",
+    "tagline": "{count} ans d’expérience, et j’apprends encore chaque semaine.",
+    "email": "Écrire à Raven-Lee",
+    "learning": "Voir ce que j’apprends"
+  },
+  "home": {
+    "aboutTitle": "À propos",
+    "seeExperience": "Voir mon expérience",
+    "nowTitle": "J’apprends en ce moment",
+    "nowIntro": "Je tiens une courte liste datée de ce que j’étudie, pour que l’habitude reste honnête.",
+    "latestTitle": "Dernière note",
+    "allNotes": "Lire toutes les notes"
+  },
+  "experience": {
+    "title": "Expérience",
+    "intro": "Cinq ans à créer des plateformes web, des services financiers à un projet bénévole sans but lucratif.",
+    "rolesTitle": "Postes",
+    "skillsTitle": "Compétences",
+    "spokenTitle": "Langues parlées",
+    "howTitle": "Ma façon de travailler"
+  },
+  "learning": {
+    "title": "Apprentissage",
+    "intro": "Progresser fait partie du métier. Cette page montre comment : ce que j’étudie, ce que je consigne et ce que j’ai obtenu.",
+    "since": "Depuis {date}",
+    "credentialsTitle": "Formation et certifications",
+    "notesTitle": "Notes d’apprentissage",
+    "notesIntro": "De courts textes sur ce que j’ai essayé, ce qui m’a surpris et ce que je ferai autrement."
+  },
+  "credentials": {
+    "current": "En cours",
+    "lapsed": "Expirée"
+  },
+  "notes": {
+    "empty": "Aucune note pour le moment.",
+    "back": "Toutes les notes d’apprentissage",
+    "englishOnly": "En anglais seulement",
+    "englishOnlyLong": "Cette note n’est offerte qu’en anglais."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Le moyen le plus rapide de me joindre est le courriel. Je lis chaque message.",
+    "emailMe": "Écrire à Raven-Lee",
+    "copy": "Copier l’adresse courriel",
+    "copied": "Adresse courriel copiée",
+    "copyFailed": "Copie impossible. L’adresse est {email}",
+    "elsewhere": "Ailleurs sur le web",
+    "where": "Établi à Ottawa, en Ontario, au Canada."
+  },
+  "resume": {
+    "hint": "Cette page s’imprime en CV sur une colonne. Cliquez sur Imprimer, puis choisissez Enregistrer en PDF.",
+    "print": "Imprimer ou enregistrer en PDF",
+    "summary": "Sommaire",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "education": "Formation et certifications"
+  },
+  "error": {
+    "code": "Erreur {code}",
+    "home": "Aller à la page d’accueil",
+    "languages": "Lire ce site en :",
+    "notFound": {
+      "title": "Cette page n’existe pas",
+      "body": "L’adresse contient peut-être une faute de frappe, ou la page a été déplacée. Essayez la page d’accueil ou la page d’apprentissage."
+    },
+    "badRequest": {
+      "title": "Cette demande n’a pas fonctionné",
+      "body": "L’adresse ou la demande n’était pas valide. Vérifiez-la et réessayez, ou repartez de la page d’accueil."
+    },
+    "server": {
+      "title": "Un problème est survenu",
+      "body": "Le site a eu un problème au chargement de cette page. Rechargez-la, ou repartez de la page d’accueil."
+    }
+  },
+  "seo": {
+    "imageAlt": "Raven-Lee Mills, développement full-stack, avec un bouquet de fleurs roses",
+    "home": {
+      "title": "Raven-Lee Mills, développement full-stack à Ottawa",
+      "description": "Développement full-stack à Ottawa : cinq ans d’expérience et l’habitude d’apprendre quelque chose de nouveau chaque semaine."
+    },
+    "experience": {
+      "title": "Expérience {'|'} Raven-Lee Mills",
+      "description": "Postes, compétences et langues : cinq ans à créer des plateformes web avec React, Next.js, Python et PostgreSQL."
+    },
+    "learning": {
+      "title": "Apprentissage {'|'} Raven-Lee Mills",
+      "description": "Ce que Raven-Lee Mills étudie en ce moment, avec sa formation, ses certifications et ses notes d’apprentissage."
+    },
+    "resume": {
+      "title": "CV {'|'} Raven-Lee Mills",
+      "description": "CV imprimable de Raven-Lee Mills, développement full-stack et ingénieur stagiaire."
+    },
+    "contact": {
+      "title": "Contact {'|'} Raven-Lee Mills",
+      "description": "Écrivez à Raven-Lee Mills ou rejoignez Raven-Lee sur LinkedIn : développement full-stack à Ottawa."
+    }
+  }
+}

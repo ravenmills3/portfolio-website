@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "skip": "Skip to main content",
+    "home": "home",
+    "label": "Main",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "experience": "Experience",
+    "learning": "Learning",
+    "resume": "Résumé",
+    "contact": "Contact"
+  },
+  "settings": {
+    "theme": "Theme",
+    "system": "Match my device",
+    "light": "Light",
+    "dark": "Dark",
+    "animations": "Animations"
+  },
+  "lang": {
+    "label": "Change language"
+  },
+  "footer": {
+    "rights": "© {year} Raven-Lee Mills"
+  },
+  "common": {
+    "present": "Present",
+    "newTab": "(opens in a new tab)"
+  },
+  "hero": {
+    "role": "Full-stack developer in Ottawa",
+    "tagline": "{count} years in, still learning every week.",
+    "email": "Email Raven-Lee",
+    "learning": "See what I'm learning"
+  },
+  "home": {
+    "aboutTitle": "About",
+    "seeExperience": "See my experience",
+    "nowTitle": "Learning right now",
+    "nowIntro": "I keep a short, dated list of what I'm studying so the habit stays honest.",
+    "latestTitle": "Latest note",
+    "allNotes": "Read all notes"
+  },
+  "experience": {
+    "title": "Experience",
+    "intro": "Five years of building web platforms, from financial services to a volunteer non-profit project.",
+    "rolesTitle": "Roles",
+    "skillsTitle": "Skills",
+    "spokenTitle": "Spoken languages",
+    "howTitle": "How I work"
+  },
+  "learning": {
+    "title": "Learning",
+    "intro": "Growing as a developer is part of the job. This page shows how: what I'm studying, what I write down, and what I've earned.",
+    "since": "Since {date}",
+    "credentialsTitle": "Education and certifications",
+    "notesTitle": "Learning notes",
+    "notesIntro": "Short write-ups of what I tried, what surprised me and what I'll do differently."
+  },
+  "credentials": {
+    "current": "Current",
+    "lapsed": "Lapsed"
+  },
+  "notes": {
+    "empty": "No notes yet.",
+    "back": "All learning notes",
+    "englishOnly": "English only",
+    "englishOnlyLong": "This note is only available in English."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "The fastest way to reach me is email. I read every message.",
+    "emailMe": "Email Raven-Lee",
+    "copy": "Copy email address",
+    "copied": "Email address copied",
+    "copyFailed": "Couldn't copy. The address is {email}",
+    "elsewhere": "Elsewhere",
+    "where": "Based in {place}."
+  },
+  "resume": {
+    "hint": "This page prints as a one-column résumé. Use Print, then choose Save as PDF.",
+    "print": "Print or save as PDF",
+    "summary": "Summary",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education and certifications"
+  },
+  "error": {
+    "code": "Error {code}",
+    "home": "Go to the home page",
+    "languages": "Read this site in:",
+    "notFound": {
+      "title": "This page doesn't exist",
+      "body": "The address may be mistyped, or the page may have moved. Try the home page or the learning page."
+    },
+    "badRequest": {
+      "title": "That request didn't work",
+      "body": "The address or request wasn't valid. Check it and try again, or start from the home page."
+    },
+    "server": {
+      "title": "Something went wrong",
+      "body": "The site hit a problem loading this page. Reload, or start from the home page."
+    }
+  },
+  "seo": {
+    "imageAlt": "Raven-Lee Mills, full-stack developer, with a cluster of pink flower blooms",
+    "home": {
+      "title": "Raven-Lee Mills, full-stack developer in Ottawa",
+      "description": "Full-stack developer in Ottawa with five years of experience and a habit of learning something new every week."
+    },
+    "experience": {
+      "title": "Experience {'|'} Raven-Lee Mills",
+      "description": "Roles, skills and languages: five years building web platforms with React, Next.js, Python and PostgreSQL."
+    },
+    "learning": {
+      "title": "Learning {'|'} Raven-Lee Mills",
+      "description": "What Raven-Lee Mills is studying now, plus education, certifications and learning notes."
+    },
+    "resume": {
+      "title": "Résumé {'|'} Raven-Lee Mills",
+      "description": "Printable résumé for Raven-Lee Mills, full-stack developer and Engineer-in-Training."
+    },
+    "contact": {
+      "title": "Contact {'|'} Raven-Lee Mills",
+      "description": "Email or connect with Raven-Lee Mills, a full-stack developer based in Ottawa."
+    }
+  }
+}
