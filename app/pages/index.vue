@@ -85,13 +85,13 @@ useHead({
       </UContainer>
     </section>
 
-    <section class="py-12" aria-labelledby="now-title">
+    <!-- <section class="py-12" aria-labelledby="now-title">
       <UContainer>
         <h2 id="now-title">{{ t("home.nowTitle") }}</h2>
         <p class="mb-6 mt-3 max-w-prose text-muted">{{ t("home.nowIntro") }}</p>
         <LearningNow />
       </UContainer>
-    </section>
+    </section> -->
 
     <section v-if="notes?.length" class="py-12" aria-labelledby="latest-title">
       <UContainer>

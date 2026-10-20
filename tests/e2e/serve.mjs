@@ -1,4 +1,5 @@
-// Static preview that mimics wrangler.toml: clean URLs, trailing slashes dropped, 404.html fallback.
+// Static preview that mimics wrangler.toml: clean URLs, trailing slashes dropped, 404.html fallback
+// and the rules in _headers, so the CSP is enforced in tests.
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
@@ -17,6 +18,30 @@ const types = {
   ".xml": "application/xml",
   ".txt": "text/plain",
 };
+
+// Parse _headers into [pattern, headers] rules; "*" matches any characters.
+async function headerRules() {
+  const text = await readFile(join(root, "_headers"), "utf8").catch(() => "");
+  const rules = [];
+  for (const line of text.split("\n")) {
+    if (!line.trim() || line.trim().startsWith("#")) continue;
+    if (!/^\s/.test(line)) {
+      const pattern = line.trim().replace(/[.+?^${}()|[\]\\]/g, "\\$&");
+      rules.push([new RegExp(`^${pattern.replaceAll("*", ".*")}$`), {}]);
+    } else if (rules.length) {
+      const [name, ...value] = line.trim().split(":");
+      rules.at(-1)[1][name.trim().toLowerCase()] = value.join(":").trim();
+    }
+  }
+  return rules;
+}
+
+async function headersFor(pathname) {
+  const headers = {};
+  for (const [pattern, values] of await headerRules())
+    if (pattern.test(pathname)) Object.assign(headers, values);
+  return headers;
+}
 
 async function resolve(pathname) {
   const clean = normalize(decodeURIComponent(pathname)).replace(
@@ -38,11 +63,13 @@ createServer(async (req, res) => {
     res.writeHead(307, { location: pathname.replace(/\/+$/, "") + search });
     return res.end();
   }
-  const file = await resolve(pathname);
+  // Cloudflare applies _headers but never serves the file itself.
+  const file = pathname === "/_headers" ? null : await resolve(pathname);
   const target = file ?? join(root, "404.html");
   const status = file ? 200 : 404;
   try {
     res.writeHead(status, {
+      ...(await headersFor(pathname)),
       "content-type": types[extname(target)] ?? "application/octet-stream",
     });
     res.end(await readFile(target));

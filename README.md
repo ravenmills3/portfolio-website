@@ -48,6 +48,7 @@ The site deploys as a Cloudflare Worker with static assets only, no Worker scrip
 - `nuxt.config.ts` sets Nitro's `static` preset. Without it, Cloudflare's build is detected as a Worker server, and Nitro writes its own Wrangler config, which conflicts with this one.
 - Pages are served without a trailing slash: `/experience/` redirects to `/experience`. Unknown addresses get `404.html` with a 404 status.
 - `public/_headers` sets security and cache headers. The CSP allows inline scripts and styles because Nuxt writes small inline ones.
+- The CSP only allows requests to the site itself, so every icon is bundled at build time (`icon` in `nuxt.config.ts`)
 
 ## Translations
 
