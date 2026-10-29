@@ -1,5 +1,5 @@
 # Static site served by Workers static assets; no Worker script.
-name = "ravenleemills-dev"
+name = "portfolio-website"
 compatibility_date = "2026-10-01"
 
 [assets]
@@ -8,3 +8,6 @@ directory = ".output/public"
 not_found_handling = "404-page"
 # Serve /experience from experience/index.html without redirecting to /experience/.
 html_handling = "drop-trailing-slash"
+
+# Required by `wrangler preview`
+[previews]
