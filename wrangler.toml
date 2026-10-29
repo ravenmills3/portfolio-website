@@ -1,5 +1,5 @@
 # Static site served by Workers static assets; no Worker script.
-name = "portfolio-website"
+name = 'portfolio-website'
 compatibility_date = "2026-10-01"
 
 [assets]
@@ -11,3 +11,8 @@ html_handling = "drop-trailing-slash"
 
 # Required by `wrangler preview`
 [previews]
+
+[observability.logs]
+enabled = true
+invocation_logs = false
+persist = true

@@ -58,3 +58,36 @@ test("Learning lists every note and the old Notes page is gone", async ({
   ).toHaveCount(4);
   expect((await page.goto("/notes"))?.status()).toBe(404);
 });
+
+test("client-side navigation stays on this origin and within the CSP", async ({
+  page,
+  baseURL,
+}) => {
+  const problems = trackConsole(page);
+  const external: string[] = [];
+  page.on("request", (r) => {
+    const { origin, protocol } = new URL(r.url());
+    if (protocol.startsWith("http") && origin !== new URL(baseURL!).origin)
+      external.push(r.url());
+  });
+  await page.goto("/");
+  await ready(page);
+  const nav = page.getByRole("navigation", { name: "Main" });
+  // Icons drawn after hydration must come from the bundle, not Iconify's API.
+  for (const [name, path] of [
+    ["Experience", "/experience"],
+    ["Learning", "/learning"],
+    ["Résumé", "/resume"],
+    ["Contact", "/contact"],
+  ] as const) {
+    await nav.getByRole("link", { name }).click();
+    await expect(page).toHaveURL((url) => url.pathname === path);
+    await page.waitForLoadState("networkidle");
+  }
+  await page.getByRole("button", { name: "Animations" }).click();
+  await page.getByRole("button", { name: "Change language" }).click();
+  await page.getByRole("menuitem", { name: "Français" }).click();
+  await page.waitForLoadState("networkidle");
+  expect(external).toEqual([]);
+  expect(problems).toEqual([]);
+});
