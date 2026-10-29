@@ -20,7 +20,8 @@
     "tile:check": "node scripts/tile-geometry.mjs --check",
     "i18n:check": "node scripts/i18n-check.mjs",
     "favicon": "node scripts/favicon.mjs",
-    "check": "pnpm ramps:check && pnpm tile:check && pnpm i18n:check"
+    "favicon:check": "node scripts/favicon.mjs --check",
+    "check": "pnpm ramps:check && pnpm tile:check && pnpm favicon:check && pnpm i18n:check"
   },
   "dependencies": {
     "@iconify-json/lucide": "1.2.146",

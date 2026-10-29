@@ -24,7 +24,7 @@ const date = computed(() =>
   <UContainer v-else class="py-12 lg:py-16">
     <NuxtLinkLocale
       :to="{ path: '/learning', hash: '#notes' }"
-      class="inline-flex items-center gap-1 text-muted hover:text-highlighted"
+      class="inline-flex min-h-11 items-center gap-1 text-muted hover:text-highlighted"
     >
       <UIcon name="i-lucide-arrow-left" aria-hidden="true" />{{
         t("notes.back")
@@ -37,13 +37,12 @@ const date = computed(() =>
       </p>
       <UAlert
         v-if="note.fallback"
-        class="mt-6 max-w-prose"
+        class="mt-6 max-w-(--container-prose)"
         color="info"
         variant="subtle"
         icon="i-lucide-languages"
         :description="t('notes.englishOnlyLong')"
       />
-      <!-- Trusted: Markdown comes from this repository, rendered at build time. -->
       <div
         class="prose-note mt-8"
         :lang="note.fallback ? 'en' : undefined"

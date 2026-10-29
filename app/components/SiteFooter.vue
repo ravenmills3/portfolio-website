@@ -2,6 +2,8 @@
 import { profile } from "~~/data/profile";
 
 const { t } = useI18n();
+// Tooltips only in the desktop layout
+const wide = useWideScreen();
 const year = new Date().getFullYear();
 const social = [
   { name: "GitHub", href: profile.links.GitHub, icon: "i-simple-icons-github" },
@@ -27,26 +29,30 @@ const social = [
       </div>
       <ul class="flex items-center gap-2" role="list">
         <li>
-          <UButton
-            color="neutral"
-            variant="ghost"
-            icon="i-lucide-mail"
-            size="lg"
-            :to="`mailto:${profile.email}`"
-            :aria-label="t('contact.emailMe')"
-          />
+          <UTooltip :text="t('contact.emailMe')" :disabled="!wide">
+            <UButton
+              color="neutral"
+              variant="ghost"
+              icon="i-lucide-mail"
+              size="lg"
+              :to="`mailto:${profile.email}`"
+              :aria-label="t('contact.emailMe')"
+            />
+          </UTooltip>
         </li>
         <li v-for="s in social" :key="s.name">
-          <UButton
-            color="neutral"
-            variant="ghost"
-            :icon="s.icon"
-            size="lg"
-            :to="s.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            :aria-label="`${s.name} ${t('common.newTab')}`"
-          />
+          <UTooltip :text="s.name" :disabled="!wide">
+            <UButton
+              color="neutral"
+              variant="ghost"
+              :icon="s.icon"
+              size="lg"
+              :to="s.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="`${s.name} ${t('common.newTab')}`"
+            />
+          </UTooltip>
         </li>
       </ul>
     </UContainer>

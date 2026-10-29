@@ -21,13 +21,15 @@ const fmt = computed(
 </script>
 
 <template>
-  <article class="paper swatch-lilac">
+  <article
+    class="paper swatch-lilac relative has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-[var(--ui-primary)]"
+  >
     <div class="wallpaper swatch-strip" aria-hidden="true" />
     <div class="p-6">
       <h3 class="text-2xl">
         <NuxtLinkLocale
           :to="`${NOTE_BASE}/${note.slug}`"
-          class="text-highlighted underline-offset-4 hover:underline"
+          class="text-highlighted underline-offset-4 after:absolute after:inset-0 hover:underline focus-visible:outline-none"
           >{{ note.title }}</NuxtLinkLocale
         >
       </h3>
@@ -36,7 +38,7 @@ const fmt = computed(
           fmt.format(new Date(`${note.date}T12:00:00`))
         }}</time>
       </p>
-      <p class="mt-3 max-w-prose">{{ note.summary }}</p>
+      <p class="mt-3 max-w-(--container-prose)">{{ note.summary }}</p>
       <UBadge
         v-if="note.fallback"
         class="mt-3"

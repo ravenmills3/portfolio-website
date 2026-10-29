@@ -1,24 +1,27 @@
 #!/usr/bin/env node
-// Generates app/assets/css/wallpaper.css: a blooms-only damask tile drawn with radial gradients.
+// Generates app/assets/css/wallpaper.css: a blooms-only damask tile of sakura blossoms.
+// Petals are an SVG mask coloured by --petal; centres and florets are radial gradients.
 //   node scripts/tile-geometry.mjs           print the CSS
 //   node scripts/tile-geometry.mjs --write   rewrite wallpaper.css
 //   node scripts/tile-geometry.mjs --check   fail if wallpaper.css values differ (formatting is ignored)
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { SAKURA_PETAL, petalTransforms } from "../shared/utils/blossom.ts";
 
 const CSS_PATH = resolve(
   dirname(fileURLToPath(import.meta.url)),
   "../app/assets/css/wallpaper.css",
 );
 
-// The motif: five petals on a ring, starting at twelve o'clock.
+// The motif: five sakura petals around a centre, the first at twelve o'clock.
 export const PETALS = 5;
-export const RING = 9;
 export const START = -90;
+// Petal length as % of the tile, matching the old round petals' reach (ring + radius).
+export const PETAL_REACH = 17;
 
 // Two blossoms on opposite diagonals give the half-drop rhythm of real wallpaper.
-const BLOSSOMS = [
+export const BLOSSOMS = [
   [25, 25],
   [75, 75],
 ];
@@ -42,13 +45,22 @@ export function ring(cx, cy, radius, count, start = START) {
 const dot = (radius, x, y, colour) =>
   `    radial-gradient(circle var(--${radius}) at ${pct(x)}% ${pct(y)}%, var(--${colour}, var(--wp-${colour})) 0 90%, transparent 100%)`;
 
-export function buildStack() {
-  const layers = [];
-  for (const [cx, cy] of BLOSSOMS) {
-    layers.push(dot("core-r", cx, cy, "bloom"));
-    for (const [x, y] of ring(cx, cy, RING, PETALS))
-      layers.push(dot("petal-r", x, y, "petal"));
-  }
+// The petal shapes for one tile, as an SVG used for the mask.
+export function buildMaskSvg() {
+  const petals = BLOSSOMS.flatMap(([cx, cy]) =>
+    petalTransforms(cx, cy, PETAL_REACH, PETALS, START).map(
+      (transform) => `<path transform='${transform}' d='${SAKURA_PETAL}'/>`,
+    ),
+  );
+  return `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>${petals.join("")}</svg>`;
+}
+
+const dataUri = (svg) =>
+  `data:image/svg+xml,${svg.replace(/</g, "%3C").replace(/>/g, "%3E").replace(/#/g, "%23")}`;
+
+// Centres and florets: small dots drawn above the petals.
+export function buildDots() {
+  const layers = BLOSSOMS.map(([cx, cy]) => dot("core-r", cx, cy, "bloom"));
   for (const [cx, cy] of FLORETS) {
     for (const [x, y] of ring(cx, cy, FLORET_RING, 4, -45))
       layers.push(dot("floret-r", x, y, "floret"));
@@ -61,26 +73,56 @@ export function buildCss() {
 /* Inputs are read through fallbacks, never redeclared here, so an ancestor can recolour the tile. */
 @utility wallpaper {
   --t: var(--tile, 56px);
-  --petal-r: calc(var(--t) * 0.078);
-  --core-r: calc(var(--t) * 0.04);
+  --core-r: calc(var(--t) * 0.032);
   --floret-r: calc(var(--t) * 0.022);
-  background-image:
-${buildStack()};
-  background-size: var(--t) var(--t);
+  position: relative;
+  isolation: isolate;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  &::before {
+    background-color: var(--petal, var(--wp-petal));
+    mask-image: url("${dataUri(buildMaskSvg())}");
+    mask-size: var(--t) var(--t);
+    mask-repeat: repeat;
+  }
+  &::after {
+    background-image:
+${buildDots()};
+    background-size: var(--t) var(--t);
+  }
 }
 `;
 }
 
-// Declarations as [property, value] pairs, with comments, whitespace and number spelling normalised.
+// Declarations as ["selector|property", value] pairs, with comments, whitespace and number spelling normalised.
 export function declarations(css) {
-  return css
+  const flat = css
     .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/(?<![\w-])-?\d*\.?\d+/g, (n) => String(Number(n)))
+    .replace(/(?<![\w%-])-?\d*\.?\d+/g, (n) => String(Number(n)))
     .replace(/\s+/g, " ")
-    .replace(/ ?([(),:;{}]) ?/g, "$1")
-    .split(/[;{}]/)
-    .filter((d) => d.includes(":"))
-    .map((d) => [d.slice(0, d.indexOf(":")), d.slice(d.indexOf(":") + 1)]);
+    .replace(/ ?([(),:;{}]) ?/g, "$1");
+  const pairs = [];
+  const selectors = [];
+  let token = "";
+  for (const char of flat) {
+    if (char === "{") selectors.push(token.trim()), (token = "");
+    else if (char === "}" || char === ";") {
+      const at = token.indexOf(":");
+      if (at > 0)
+        pairs.push([
+          `${selectors.join(" ")}|${token.slice(0, at)}`,
+          token.slice(at + 1),
+        ]);
+      if (char === "}") selectors.pop();
+      token = "";
+    } else token += char;
+  }
+  return pairs;
 }
 
 // Properties whose values differ between two stylesheets.
@@ -106,7 +148,7 @@ if (runAsScript) {
       process.exit(1);
     }
     console.log(
-      `tile-geometry: wallpaper.css matches (${PETALS} petals, ring ${RING}%, ${BLOSSOMS.length} blossoms)`,
+      `tile-geometry: wallpaper.css matches (${BLOSSOMS.length} blossoms of ${PETALS} sakura petals, ${FLORETS.length} florets)`,
     );
   } else if (process.argv.includes("--write")) {
     await writeFile(CSS_PATH, css);

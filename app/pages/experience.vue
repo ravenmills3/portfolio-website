@@ -10,7 +10,7 @@ usePageSeo("experience");
   <div>
     <PageHeader :title="t('experience.title')" :intro="t('experience.intro')" />
     <UContainer class="pb-12 lg:pb-16">
-      <section class="mt-8 max-w-prose" aria-labelledby="how-title">
+      <section class="mt-8 max-w-(--container-prose)" aria-labelledby="how-title">
         <h2 id="how-title" class="mb-4">{{ t("experience.howTitle") }}</h2>
         <p
           v-for="(para, i) in howIWork.paragraphs"

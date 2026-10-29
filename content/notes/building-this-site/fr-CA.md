@@ -2,7 +2,6 @@
 title: Création de ce site avec Nuxt UI
 date: 2026-10-20
 summary: Pourquoi Nuxt, Tailwind et Nuxt UI, et comment fonctionnent les deux thèmes et les trois langues.
-placeholder: true
 ---
 
 Ce site est créé avec Nuxt, Vue, TypeScript et Tailwind CSS, avec Nuxt UI pour des composants accessibles.

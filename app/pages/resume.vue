@@ -26,7 +26,7 @@ const print = () => window.print();
       <div
         class="no-print mb-8 flex flex-wrap items-center justify-between gap-3"
       >
-        <p class="max-w-prose text-muted">{{ t("resume.hint") }}</p>
+        <p class="max-w-(--container-prose) text-muted">{{ t("resume.hint") }}</p>
         <UButton icon="i-lucide-printer" size="lg" @click="print">{{
           t("resume.print")
         }}</UButton>
@@ -50,7 +50,7 @@ const print = () => window.print();
 
         <section class="mt-8" aria-labelledby="r-summary">
           <h2 id="r-summary" class="text-2xl">{{ t("resume.summary") }}</h2>
-          <p class="mt-2">{{ text(summary) }}</p>
+          <p class="mt-2 max-w-(--container-prose) print:max-w-none">{{ text(summary) }}</p>
         </section>
 
         <section class="mt-8" aria-labelledby="r-skills">

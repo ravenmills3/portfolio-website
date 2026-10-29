@@ -1,4 +1,4 @@
-// Runs against the static build, with the system Chrome (no browser download).
+// Runs against the static build
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({

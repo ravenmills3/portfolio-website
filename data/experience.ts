@@ -15,9 +15,9 @@ export const headline = l(
 );
 
 export const summary = l(
-  "Full-stack software developer with 5 years of experience in agile, fast-paced environments, working both independently and as part of a team to deliver solutions. I analyze business requirements, then design, build, test and maintain web applications. I also use AI coding assistants to speed up prototyping, testing and debugging.",
-  "Développement logiciel full-stack avec 5 ans d’expérience en milieu agile et rapide, en solo comme en équipe. J’analyse les besoins d’affaires, puis je conçois, développe, teste et maintiens des applications web. J’utilise aussi des assistants de codage IA pour accélérer le prototypage, les tests et le débogage.",
-  "Lập trình viên phần mềm full-stack với 5 năm kinh nghiệm trong môi trường agile, nhịp độ nhanh, làm việc độc lập và theo nhóm. Tôi phân tích yêu cầu nghiệp vụ rồi thiết kế, xây dựng, kiểm thử và bảo trì ứng dụng web. Tôi cũng dùng trợ lý lập trình AI để tăng tốc việc tạo mẫu, kiểm thử và gỡ lỗi.",
+  "Full-stack software developer with 5 years of experience delivering web applications in agile, fast-paced teams. I take features from business requirements through design, build, testing and maintenance, working independently or as part of a team. I'm working toward my P.Eng. and senior full-stack responsibilities: architecture, mentoring and owning features end to end.",
+  "Développement logiciel full-stack avec 5 ans d’expérience à livrer des applications web au sein d’équipes agiles au rythme soutenu. Je mène les fonctionnalités des besoins d’affaires à la conception, au développement, aux tests et à la maintenance, en autonomie comme en équipe. Je travaille à obtenir mon titre d’ing. et à assumer des responsabilités full-stack de niveau senior : architecture, mentorat et prise en charge complète des fonctionnalités.",
+  "Lập trình viên phần mềm full-stack với 5 năm kinh nghiệm phát triển ứng dụng web trong các nhóm agile có nhịp độ nhanh. Tôi đưa tính năng đi từ yêu cầu nghiệp vụ qua thiết kế, xây dựng, kiểm thử đến bảo trì, làm việc độc lập hoặc theo nhóm. Tôi đang hướng tới giấy phép kỹ sư chuyên nghiệp (P.Eng.) và các trách nhiệm full-stack cấp cao: kiến trúc, cố vấn và làm chủ tính năng từ đầu đến cuối.",
 );
 
 export interface SkillGroup {
@@ -156,14 +156,14 @@ export const roles: Role[] = [
         "Viết tài liệu mã nguồn, kiến trúc và đặc tả API bằng OpenAPI/Swagger để chuẩn hóa bàn giao và rút ngắn thời gian làm quen của lập trình viên mới.",
       ),
       l(
-        "Partner with designers, CRM specialists and product managers to turn business requirements into features, shipping 15+ features across 8 sprints.",
+        "Partner with designers, CRM specialists and product managers to turn business requirements into features, shipping more than 15 features across 8 sprints.",
         "Collaboration avec des designers, des spécialistes CRM et des gestionnaires de produit pour transformer les besoins d’affaires en fonctionnalités : plus de 15 livrées en 8 sprints.",
         "Phối hợp với nhà thiết kế, chuyên viên CRM và quản lý sản phẩm để biến yêu cầu nghiệp vụ thành tính năng, bàn giao hơn 15 tính năng trong 8 sprint.",
       ),
       l(
-        "Diagnose and fix bugs independently using object-oriented programming and design patterns, substantially improving platform functionality.",
-        "Diagnostic et correction autonomes des bogues grâce à la programmation orientée objet et aux patrons de conception, pour une nette amélioration de la plateforme.",
-        "Tự chẩn đoán và sửa lỗi bằng lập trình hướng đối tượng và các mẫu thiết kế, cải thiện đáng kể chức năng của nền tảng.",
+        "Independently diagnose and resolve bugs with object-oriented design and design patterns, substantially improving platform functionality.",
+        "Diagnostic et résolution autonomes des bogues grâce à la conception orientée objet et aux patrons de conception, pour une nette amélioration de la plateforme.",
+        "Tự chẩn đoán và khắc phục lỗi bằng thiết kế hướng đối tượng và các mẫu thiết kế, cải thiện đáng kể chức năng của nền tảng.",
       ),
     ],
   },
@@ -180,9 +180,9 @@ export const roles: Role[] = [
     ),
     bullets: [
       l(
-        "Built client-facing platform modules in React and JavaScript, paying close attention to small design details for a sleek, cohesive interface.",
-        "Création de modules destinés aux clients en React et JavaScript, avec un souci du détail pour une interface soignée et cohérente.",
-        "Xây dựng các mô-đun hướng đến khách hàng bằng React và JavaScript, chú trọng từng chi tiết thiết kế để có giao diện tinh gọn và nhất quán.",
+        "Built client-facing platform modules in React and JavaScript, delivering a polished, cohesive interface down to the smallest design details.",
+        "Création de modules destinés aux clients en React et JavaScript, pour une interface soignée et cohérente jusque dans les moindres détails.",
+        "Xây dựng các mô-đun hướng đến khách hàng bằng React và JavaScript, mang lại giao diện tinh tế, nhất quán đến từng chi tiết nhỏ nhất.",
       ),
       l(
         "Cut API response times by 20% by redesigning RESTful APIs in Flask (Python) and GraphQL, improving node interoperability.",
@@ -205,9 +205,9 @@ export const roles: Role[] = [
         "Duy trì các kho Git riêng trên AWS CodeCommit, rà soát pull request bằng linter đã cấu hình và các bước kiểm tra bảo mật tùy chỉnh.",
       ),
       l(
-        "Worked with cross-functional teams to assess customer needs, write user requirements and document decisions and tasks.",
-        "Collaboration avec des équipes multidisciplinaires pour évaluer les besoins des clients, rédiger les exigences et documenter les décisions et les tâches.",
-        "Làm việc với các nhóm liên chức năng để đánh giá nhu cầu khách hàng, viết yêu cầu người dùng và ghi lại các quyết định, công việc cần làm.",
+        "Partnered with cross-functional teams to assess customer needs, define user requirements, and document decisions and tasks.",
+        "Collaboration avec des équipes multidisciplinaires pour évaluer les besoins des clients, définir les exigences et documenter les décisions et les tâches.",
+        "Phối hợp với các nhóm liên chức năng để đánh giá nhu cầu khách hàng, xác định yêu cầu người dùng và ghi lại các quyết định, công việc.",
       ),
       l(
         "Built and maintained internal infrastructure integrating AWS Lambda and the DocuSign API, improving client latency and meeting industry compliance standards.",
@@ -215,9 +215,9 @@ export const roles: Role[] = [
         "Xây dựng và duy trì hạ tầng nội bộ tích hợp AWS Lambda và API DocuSign, cải thiện độ trễ cho khách hàng và đáp ứng tiêu chuẩn tuân thủ của ngành.",
       ),
       l(
-        "Assessed the platform on my own and proposed accessibility improvements to more than 25% of its user experience, following WCAG 2.2.",
-        "Évaluation autonome de la plateforme et propositions d’amélioration de l’accessibilité touchant plus de 25 % de l’expérience utilisateur, selon les WCAG 2.2.",
-        "Tự đánh giá nền tảng và đề xuất cải thiện khả năng truy cập cho hơn 25% trải nghiệm người dùng, theo WCAG 2.2.",
+        "Led an independent WCAG 2.2 accessibility review of the platform and proposed improvements covering more than 25% of its user experience.",
+        "Direction d’un examen autonome de l’accessibilité de la plateforme selon les WCAG 2.2, avec des propositions d’amélioration touchant plus de 25 % de l’expérience utilisateur.",
+        "Chủ trì một đợt đánh giá độc lập về khả năng truy cập của nền tảng theo WCAG 2.2 và đề xuất cải thiện cho hơn 25% trải nghiệm người dùng.",
       ),
     ],
   },
@@ -312,14 +312,14 @@ export const currentlyLearning: Learning[] = [
     since: "2026-08",
     placeholder: true,
     topic: l(
-      "[Placeholder] A third topic",
-      "[Exemple] Un troisième sujet",
-      "[Mẫu] Chủ đề thứ ba",
+      "[Placeholder] A craft skill or a book I'm reading",
+      "[Exemple] Un savoir-faire artisanal ou un livre que je lis",
+      "[Mẫu] Một kỹ năng thủ công hoặc cuốn sách tôi đang đọc",
     ),
     why: l(
-      "Replace with one sentence on where you are learning it.",
-      "Remplacer par une phrase sur la source de votre apprentissage.",
-      "Thay bằng một câu về nơi bạn đang học nó.",
+      "Replace with one sentence on what it's teaching you, at work or beyond it.",
+      "Remplacer par une phrase sur ce qu’il vous apprend, au travail ou ailleurs.",
+      "Thay bằng một câu về điều nó dạy bạn, trong công việc hay ngoài công việc.",
     ),
   },
 ];
@@ -327,19 +327,24 @@ export const currentlyLearning: Learning[] = [
 export const howIWork: { paragraphs: L10n[] } = {
   paragraphs: [
     l(
-      "I start with the requirements and write them down. Documenting APIs in OpenAPI and recording decisions as I go means the next developer, or future me, can pick the work up without a meeting.",
-      "Je commence par les besoins, et je les mets par écrit. Documenter les API avec OpenAPI et consigner les décisions au fur et à mesure permet à la prochaine personne, ou à moi plus tard, de reprendre le travail sans réunion.",
-      "Tôi bắt đầu từ yêu cầu và ghi chúng lại. Viết tài liệu API bằng OpenAPI và ghi lại các quyết định trong quá trình làm giúp người tiếp theo, hoặc chính tôi sau này, tiếp tục công việc mà không cần họp.",
+      "I start every feature with written requirements and document APIs in OpenAPI, so anyone can pick up the work without a meeting.",
+      "Je commence chaque fonctionnalité par des besoins écrits et je documente les API avec OpenAPI, pour que n’importe qui puisse reprendre le travail sans réunion.",
+      "Tôi bắt đầu mỗi tính năng bằng yêu cầu viết rõ ràng và ghi tài liệu API bằng OpenAPI, để bất kỳ ai cũng có thể tiếp tục công việc mà không cần họp.",
     ),
     l(
-      "I review code for more than style. Performance, data integrity and security get checked on every pull request, because they are the expensive things to fix after release.",
-      "Je révise le code pour plus que le style. La performance, l’intégrité des données et la sécurité sont vérifiées à chaque demande de fusion, car ce sont les choses coûteuses à corriger après la mise en production.",
-      "Tôi rà soát mã không chỉ về phong cách. Hiệu năng, toàn vẹn dữ liệu và bảo mật được kiểm tra ở mỗi pull request, vì đó là những thứ tốn kém nhất nếu phải sửa sau khi phát hành.",
+      "I review every pull request for performance, data integrity and security, the things that cost most to fix after release.",
+      "Je révise chaque demande de fusion pour la performance, l’intégrité des données et la sécurité, ce qui coûte le plus cher à corriger après la mise en production.",
+      "Tôi rà soát mỗi pull request về hiệu năng, toàn vẹn dữ liệu và bảo mật, những thứ tốn kém nhất nếu phải sửa sau khi phát hành.",
     ),
     l(
-      "I build for everyone who will use the product. I test against WCAG 2.2 as part of normal work, not as a final pass, and I measure whether a change actually made the experience better.",
-      "Je conçois pour toutes les personnes qui utiliseront le produit. Je teste selon les WCAG 2.2 dans le travail courant, pas seulement à la fin, et je mesure si un changement a vraiment amélioré l’expérience.",
-      "Tôi xây dựng cho tất cả những ai sẽ dùng sản phẩm. Tôi kiểm tra theo WCAG 2.2 trong công việc hằng ngày chứ không để đến cuối, và đo xem một thay đổi có thực sự cải thiện trải nghiệm hay không.",
+      "I test against WCAG 2.2 as I build, not as a final pass, and measure whether each change improved the experience.",
+      "Je teste selon les WCAG 2.2 au fil du développement, pas seulement à la fin, et je mesure si chaque changement a amélioré l’expérience.",
+      "Tôi kiểm tra theo WCAG 2.2 ngay trong lúc xây dựng chứ không để đến cuối, và đo xem mỗi thay đổi có cải thiện trải nghiệm hay không.",
+    ),
+    l(
+      "Next for me: my P.Eng., a senior role and professional French. Away from the keyboard, craft projects and books keep shaping how I build.",
+      "Mes prochaines étapes : mon titre d’ing., un rôle senior et un français professionnel. Loin du clavier, l’artisanat et les livres continuent d’influencer ma façon de concevoir.",
+      "Mục tiêu tiếp theo của tôi: giấy phép kỹ sư chuyên nghiệp (P.Eng.), vai trò cấp cao và tiếng Pháp chuyên nghiệp. Ngoài giờ làm, các dự án thủ công và những cuốn sách vẫn định hình cách tôi xây dựng phần mềm.",
     ),
   ],
 };

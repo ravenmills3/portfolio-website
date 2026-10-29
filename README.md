@@ -13,9 +13,9 @@ Development Portfolio for Raven-Lee Mills created using Nuxt 4, Vue 3, TypeScrip
 | `pnpm test:unit`      | Node's built-in test runner                                                                     |
 | `pnpm test:e2e`       | Builds, then runs Playwright on the installed Chrome                                            |
 | `pnpm assets`         | Re-renders `og-image.png`, `favicon.ico` and `apple-touch-icon.png` (needs Chrome and internet) |
-| `pnpm check`          | Runs `ramps:check`, `tile:check` and `i18n:check` (also in CI). Formatting is ignored           |
+| `pnpm check`          | Runs `ramps:check`, `tile:check`, `favicon:check` and `i18n:check` (also in CI)                 |
 | `pnpm ramps:contrast` | Contrast of each theme's semantic colours against its background                                |
-| `pnpm favicon`        | Regenerates `public/favicon.svg` from the wallpaper geometry                                    |
+| `pnpm favicon`        | Regenerates `public/favicon.svg` from the shared sakura geometry                                |
 
 ## Content
 
@@ -30,13 +30,15 @@ Development Portfolio for Raven-Lee Mills created using Nuxt 4, Vue 3, TypeScrip
 
 ## Wallpaper
 
-The floral tile is drawn with radial gradients only, generated into `app/assets/css/wallpaper.css` by `scripts/tile-geometry.mjs`. It has blooms only, no leaves. The favicon and the header mark use the same five-petal geometry.
+The floral tile is generated into `app/assets/css/wallpaper.css` by `scripts/tile-geometry.mjs`. It has sakura blooms only, no leaves. The petals are an SVG mask coloured by `--petal`; the centres and florets are radial gradients reading `--bloom` and `--floret`. Swatch classes recolour both through those fallback variables, so the tile never declares them itself.
+
+One sakura shape is shared by the wallpaper, the hero blossoms, the header mark, the favicon and the OG image. It lives in `shared/utils/blossom.ts`: the notched petal, the stamens and the 32px mark's dimensions. `pnpm check` fails if `wallpaper.css` or `favicon.svg` drift from it.
 
 ## Header controls
 
 - **Theme:** System, Light or Dark. It follows the device until changed.
 - **Language:** Display site in English, Canadian French and Vietnamese.
-- **Animations:** A pause/play button that stops every animation on the site. It follows the device's reduced-motion setting until changed. A small head script applies it before first paint. With animations off, the flowers show fully open and the petal layer is hidden. The petals also pause while the hero is scrolled out of view.
+- **Animations:** A pause/play button that stops every animation on the site. It follows the device's reduced-motion setting until changed. A small head script applies it before first paint. The hero's blossoms open once and then drift slowly, and its buds breathe. With animations off, the blooms show fully open, the buds closed, and nothing drifts. The blossoms also pause while the hero is scrolled out of view.
 
 ## Deploy to Cloudflare
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// One flower: petals around a centre. Bud mode keeps a slow breathing loop.
+// One sakura blossom: notched petals around stamens. Bud mode keeps a slow breathing loop.
 const props = withDefaults(
   defineProps<{
     x: number;
@@ -12,7 +12,7 @@ const props = withDefaults(
   }>(),
   {
     scale: 1,
-    petals: 8,
+    petals: 5,
     delay: 0,
     bud: false,
     turn: 0,
@@ -24,6 +24,7 @@ const angles = computed(() =>
     (_, i) => props.turn + (360 / props.petals) * i,
   ),
 );
+const stamenLines = stamens(10, 5, 15);
 </script>
 
 <template>
@@ -33,13 +34,31 @@ const angles = computed(() =>
     :style="{ '--delay': `${delay}ms` }"
   >
     <g v-for="(angle, i) in angles" :key="i" :transform="`rotate(${angle})`">
-      <path
-        class="petal"
-        :style="{ '--i': i }"
-        :fill="i % 2 ? 'var(--bloom-petal-deep)' : 'var(--bloom-petal)'"
-        d="M0 0C-17 -12 -17 -40 0 -52C17 -40 17 -12 0 0Z"
-      />
+      <g class="petal" :style="{ '--i': i }">
+        <path fill="var(--bloom-petal)" :d="SAKURA_PETAL" />
+        <path
+          fill="var(--bloom-petal-deep)"
+          opacity="0.6"
+          :d="SAKURA_PETAL"
+          :transform="`scale(${BLUSH_SCALE})`"
+        />
+      </g>
     </g>
-    <circle class="bloom-core" r="9" fill="var(--bloom-pollen)" />
+    <g class="bloom-core">
+      <circle :r="bud ? 5 : 7" fill="var(--bloom-petal-deep)" />
+      <!-- Buds have no stamens -->
+      <g v-for="(s, i) in bud ? [] : stamenLines" :key="i">
+        <line
+          :x1="s.x1"
+          :y1="s.y1"
+          :x2="s.x2"
+          :y2="s.y2"
+          stroke="var(--bloom-stamen)"
+          stroke-width="1.4"
+          stroke-linecap="round"
+        />
+        <circle :cx="s.x2" :cy="s.y2" r="1.8" fill="var(--bloom-pollen)" />
+      </g>
+    </g>
   </g>
 </template>

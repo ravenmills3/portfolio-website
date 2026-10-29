@@ -29,21 +29,21 @@
   },
   "hero": {
     "role": "Lập trình viên full-stack tại Ottawa",
-    "tagline": "{count} năm kinh nghiệm, tuần nào cũng học thêm điều mới.",
-    "email": "Gửi email cho Raven-Lee",
+    "tagline": "{count} năm xây dựng cho web, và vẫn còn nhiều điều để học, cả bên bàn phím lẫn ngoài đời.",
+    "email": "Gửi email cho tôi",
     "learning": "Xem tôi đang học gì"
   },
   "home": {
     "aboutTitle": "Giới thiệu",
     "seeExperience": "Xem kinh nghiệm của tôi",
     "nowTitle": "Đang học",
-    "nowIntro": "Tôi giữ một danh sách ngắn, có ngày tháng, về những gì mình đang học để thói quen này luôn thật.",
+    "nowIntro": "Những gì tôi đang học lúc này, từ công cụ mới đến một kỹ năng thủ công hay một cuốn sách hay. Mỗi mục đều ghi ngày, để thói quen luôn trung thực.",
     "latestTitle": "Ghi chú mới nhất",
     "allNotes": "Đọc tất cả ghi chú"
   },
   "experience": {
     "title": "Kinh nghiệm",
-    "intro": "Năm năm xây dựng nền tảng web, từ dịch vụ tài chính đến một dự án phi lợi nhuận tình nguyện.",
+    "intro": "Năm năm xây dựng các nền tảng web vận hành thực tế, từ dịch vụ tài chính được quản lý chặt chẽ đến một sản phẩm đa nền tảng cho tổ chức phi lợi nhuận.",
     "rolesTitle": "Vị trí",
     "skillsTitle": "Kỹ năng",
     "spokenTitle": "Ngôn ngữ giao tiếp",
@@ -51,11 +51,11 @@
   },
   "learning": {
     "title": "Học tập",
-    "intro": "Không ngừng tiến bộ là một phần của nghề. Trang này cho thấy điều đó: tôi đang học gì, ghi chép gì và đã đạt được gì.",
+    "intro": "Phát triển bản thân là một phần của công việc, và cũng là niềm vui. Đây là những gì tôi đang học, các ghi chú tôi viết trên đường đi và những chứng chỉ đã đạt được, với mục tiêu tiếp theo là giấy phép kỹ sư chuyên nghiệp (P.Eng.).",
     "since": "Từ {date}",
     "credentialsTitle": "Học vấn và chứng chỉ",
-    "notesTitle": "Ghi chú học tập",
-    "notesIntro": "Những bài viết ngắn về điều tôi đã thử, điều làm tôi bất ngờ và điều tôi sẽ làm khác đi."
+    "notesTitle": "Ghi chú",
+    "notesIntro": "Những suy ngẫm ngắn về điều tôi đã thử, đã đọc hoặc đã làm ra, và điều tôi sẽ mang vào dự án tiếp theo."
   },
   "credentials": {
     "current": "Đang hiệu lực",
@@ -69,7 +69,7 @@
   },
   "contact": {
     "title": "Liên hệ",
-    "intro": "Cách nhanh nhất để liên lạc với tôi là qua email. Tôi đọc mọi tin nhắn.",
+    "intro": "Bạn có dự án, vị trí công việc hay một cuốn sách hay muốn giới thiệu? Email là cách nhanh nhất để liên lạc với tôi, và tôi trả lời mọi tin nhắn.",
     "emailMe": "Gửi email cho Raven-Lee",
     "copy": "Sao chép địa chỉ email",
     "copied": "Đã sao chép địa chỉ email",
@@ -106,15 +106,15 @@
     "imageAlt": "Raven-Lee Mills, lập trình viên full-stack, cùng một cụm hoa màu hồng",
     "home": {
       "title": "Raven-Lee Mills, lập trình viên full-stack tại Ottawa",
-      "description": "Lập trình viên full-stack tại Ottawa với năm năm kinh nghiệm và thói quen học điều mới mỗi tuần."
+      "description": "Lập trình viên full-stack tại Ottawa với năm năm kinh nghiệm thực tế, đang hướng tới giấy phép kỹ sư chuyên nghiệp (P.Eng.) và vai trò full-stack cấp cao."
     },
     "experience": {
       "title": "Kinh nghiệm {'|'} Raven-Lee Mills",
-      "description": "Vị trí, kỹ năng và ngôn ngữ: năm năm xây dựng nền tảng web với React, Next.js, Python và PostgreSQL."
+      "description": "Năm năm xây dựng nền tảng web với React, Next.js, Python và PostgreSQL: vị trí, kỹ năng và ngôn ngữ."
     },
     "learning": {
       "title": "Học tập {'|'} Raven-Lee Mills",
-      "description": "Điều Raven-Lee Mills đang học, cùng học vấn, chứng chỉ và ghi chú học tập."
+      "description": "Những gì Raven-Lee Mills đang học, các ghi chú học tập, cùng học vấn và chứng chỉ trên con đường hướng tới P.Eng."
     },
     "resume": {
       "title": "Sơ yếu lý lịch {'|'} Raven-Lee Mills",
