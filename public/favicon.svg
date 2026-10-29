@@ -7,11 +7,16 @@
   </style>
   <rect width="32" height="32" fill="var(--paper)" />
   <g>
-    <circle cx="16" cy="9" r="5" fill="var(--petal)" />
-    <circle cx="22.66" cy="13.84" r="5" fill="var(--petal)" />
-    <circle cx="20.11" cy="21.66" r="5" fill="var(--petal)" />
-    <circle cx="11.89" cy="21.66" r="5" fill="var(--petal)" />
-    <circle cx="9.34" cy="13.84" r="5" fill="var(--petal)" />
-    <circle cx="16" cy="16" r="2.8" fill="var(--bloom)" />
+    <path transform="translate(16 16) rotate(0) scale(0.26)" d="M0 0C-8 -6 -17 -20 -17 -34C-16 -45 -10 -52 -5 -51C-2 -50 -1 -47 0 -43C1 -47 2 -50 5 -51C10 -52 16 -45 17 -34C17 -20 8 -6 0 0Z" fill="var(--petal)" />
+    <path transform="translate(16 16) rotate(72) scale(0.26)" d="M0 0C-8 -6 -17 -20 -17 -34C-16 -45 -10 -52 -5 -51C-2 -50 -1 -47 0 -43C1 -47 2 -50 5 -51C10 -52 16 -45 17 -34C17 -20 8 -6 0 0Z" fill="var(--petal)" />
+    <path transform="translate(16 16) rotate(144) scale(0.26)" d="M0 0C-8 -6 -17 -20 -17 -34C-16 -45 -10 -52 -5 -51C-2 -50 -1 -47 0 -43C1 -47 2 -50 5 -51C10 -52 16 -45 17 -34C17 -20 8 -6 0 0Z" fill="var(--petal)" />
+    <path transform="translate(16 16) rotate(216) scale(0.26)" d="M0 0C-8 -6 -17 -20 -17 -34C-16 -45 -10 -52 -5 -51C-2 -50 -1 -47 0 -43C1 -47 2 -50 5 -51C10 -52 16 -45 17 -34C17 -20 8 -6 0 0Z" fill="var(--petal)" />
+    <path transform="translate(16 16) rotate(288) scale(0.26)" d="M0 0C-8 -6 -17 -20 -17 -34C-16 -45 -10 -52 -5 -51C-2 -50 -1 -47 0 -43C1 -47 2 -50 5 -51C10 -52 16 -45 17 -34C17 -20 8 -6 0 0Z" fill="var(--petal)" />
+    <circle cx="16" cy="16" r="2.6" fill="var(--bloom)" />
+    <circle cx="18.7" cy="12.28" r="0.9" fill="var(--bloom)" />
+    <circle cx="20.37" cy="17.42" r="0.9" fill="var(--bloom)" />
+    <circle cx="16" cy="20.6" r="0.9" fill="var(--bloom)" />
+    <circle cx="11.63" cy="17.42" r="0.9" fill="var(--bloom)" />
+    <circle cx="13.3" cy="12.28" r="0.9" fill="var(--bloom)" />
   </g>
 </svg>

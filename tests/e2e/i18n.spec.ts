@@ -49,7 +49,6 @@ for (const { from, button } of [
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       "Experience",
     );
-    // English is remembered, so / no longer redirects to the earlier choice.
     await page.goto("/");
     await ready(page);
     await expect(page).toHaveURL((url) => url.pathname === "/");

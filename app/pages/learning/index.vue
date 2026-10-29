@@ -17,7 +17,7 @@ usePageSeo("learning");
 
       <section id="notes" class="mt-16" aria-labelledby="notes-title">
         <h2 id="notes-title">{{ t("learning.notesTitle") }}</h2>
-        <p class="mt-3 max-w-prose text-muted">
+        <p class="mt-3 max-w-(--container-prose) text-muted">
           {{ t("learning.notesIntro") }}
         </p>
         <div v-if="notes?.length" class="mt-6 grid max-w-3xl gap-5">

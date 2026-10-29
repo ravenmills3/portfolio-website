@@ -17,20 +17,16 @@ const social = [
   <div>
     <PageHeader :title="t('contact.title')" :intro="t('contact.intro')" />
     <UContainer class="pb-12 lg:pb-16">
-      <p class="mt-8 font-display text-2xl text-highlighted sm:text-3xl">
+      <p
+        class="mt-8 font-display text-xl text-highlighted [overflow-wrap:anywhere] min-[375px]:text-2xl sm:text-3xl"
+      >
         <a
           :href="`mailto:${profile.email}`"
-          class="underline decoration-[var(--bloom-petal-deep)] decoration-2 underline-offset-8 hover:decoration-[var(--ui-primary)]"
+          class="inline-block py-2 underline decoration-[var(--bloom-petal-deep)] decoration-2 underline-offset-8 hover:decoration-[var(--ui-primary)]"
           >{{ profile.email }}</a
         >
       </p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <UButton
-          size="xl"
-          icon="i-lucide-mail"
-          :to="`mailto:${profile.email}`"
-          >{{ t("contact.emailMe") }}</UButton
-        >
+      <div class="mt-4 flex flex-wrap gap-3">
         <CopyEmail />
       </div>
 

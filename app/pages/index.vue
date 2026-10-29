@@ -37,36 +37,43 @@ useHead({
 
 <template>
   <div>
-    <section class="py-12 lg:py-24">
-      <UContainer class="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-        <div>
-          <h1 translate="no">{{ profile.name }}</h1>
-          <p class="mt-4 font-display text-2xl text-highlighted sm:text-3xl">
-            {{ t("hero.role") }}
-          </p>
-          <p class="mt-4 max-w-prose text-lg text-muted">
-            {{ t("hero.tagline", { count: years }) }}
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <UButton
-              size="xl"
-              icon="i-lucide-mail"
-              :to="`mailto:${profile.email}`"
-              >{{ t("hero.email") }}</UButton
-            >
-            <UButton
-              size="xl"
-              color="neutral"
-              variant="outline"
-              icon="i-lucide-sprout"
-              :to="localePath('/learning')"
-              >{{ t("hero.learning") }}</UButton
-            >
+    <section class="py-8 lg:py-14">
+      <UContainer>
+        <div
+          class="hero-panel relative isolate overflow-hidden px-6 py-10 sm:px-10 lg:flex lg:min-h-[34rem] lg:items-center lg:px-16 lg:py-16"
+        >
+          <FloatingBlossoms />
+          <!-- Phones and tablets: the blossoms fill the band above the text. Desktop: they sit to its right. -->
+          <div class="relative z-10 pt-56 md:pt-64 lg:w-[54%] lg:pt-0">
+            <h1 translate="no">
+              <template v-for="(word, i) in profile.name.split(' ')" :key="i"
+                >{{ i ? " " : ""
+                }}<span class="whitespace-nowrap">{{ word }}</span></template
+              >
+            </h1>
+            <p class="mt-4 font-display text-2xl text-highlighted sm:text-3xl">
+              {{ t("hero.role") }}
+            </p>
+            <p class="mt-4 max-w-(--container-prose) text-lg text-muted">
+              {{ t("hero.tagline", { count: years }) }}
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <UButton
+                size="xl"
+                icon="i-lucide-mail"
+                :to="`mailto:${profile.email}`"
+                >{{ t("hero.email") }}</UButton
+              >
+              <UButton
+                size="xl"
+                color="neutral"
+                variant="outline"
+                icon="i-lucide-sprout"
+                :to="localePath('/learning')"
+                >{{ t("hero.learning") }}</UButton
+              >
+            </div>
           </div>
-        </div>
-        <div class="relative order-first flex justify-center lg:order-last">
-          <PetalFall />
-          <HeroBloom class="relative max-w-64 lg:max-w-md" />
         </div>
       </UContainer>
     </section>
@@ -74,7 +81,9 @@ useHead({
     <section class="py-12" aria-labelledby="about-title">
       <UContainer>
         <h2 id="about-title">{{ t("home.aboutTitle") }}</h2>
-        <p class="mt-4 max-w-prose text-lg">{{ text(summary) }}</p>
+        <p class="mt-4 max-w-(--container-prose) text-lg">
+          {{ text(summary) }}
+        </p>
         <UButton
           class="mt-6"
           color="neutral"
@@ -88,7 +97,7 @@ useHead({
     <!-- <section class="py-12" aria-labelledby="now-title">
       <UContainer>
         <h2 id="now-title">{{ t("home.nowTitle") }}</h2>
-        <p class="mb-6 mt-3 max-w-prose text-muted">{{ t("home.nowIntro") }}</p>
+        <p class="mb-6 mt-3 max-w-(--container-prose) text-muted">{{ t("home.nowIntro") }}</p>
         <LearningNow />
       </UContainer>
     </section> -->

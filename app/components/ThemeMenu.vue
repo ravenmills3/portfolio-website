@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
+// Tooltips only in the desktop layout; the mobile view goes without.
+const wide = useWideScreen();
 const colorMode = useColorMode();
 
 const options = [
@@ -28,12 +30,14 @@ const items = computed(() =>
 
 <template>
   <UDropdownMenu :items="items" :modal="false" :content="{ align: 'end' }">
-    <UButton
-      color="neutral"
-      variant="ghost"
-      size="lg"
-      :icon="icon"
-      :aria-label="t('settings.theme')"
-    />
+    <UTooltip :text="t('settings.theme')" :disabled="!wide">
+      <UButton
+        color="neutral"
+        variant="ghost"
+        size="lg"
+        :icon="icon"
+        :aria-label="t('settings.theme')"
+      />
+    </UTooltip>
   </UDropdownMenu>
 </template>

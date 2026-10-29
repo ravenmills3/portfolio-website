@@ -9,6 +9,9 @@ not_found_handling = "404-page"
 # Serve /experience from experience/index.html without redirecting to /experience/.
 html_handling = "drop-trailing-slash"
 
+# Required by `wrangler preview`
+[previews]
+
 [observability.logs]
 enabled = true
 invocation_logs = false

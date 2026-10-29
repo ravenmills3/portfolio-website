@@ -29,21 +29,21 @@
   },
   "hero": {
     "role": "Full-stack developer in Ottawa",
-    "tagline": "{count} years in, still learning every week.",
-    "email": "Email Raven-Lee",
+    "tagline": "{count} years building for the web, with plenty still to learn, at the keyboard and away from it.",
+    "email": "Email Me",
     "learning": "See what I'm learning"
   },
   "home": {
     "aboutTitle": "About",
     "seeExperience": "See my experience",
     "nowTitle": "Learning right now",
-    "nowIntro": "I keep a short, dated list of what I'm studying so the habit stays honest.",
+    "nowIntro": "What I'm learning right now, from new tools to a craft or a good book. Each entry is dated, so the habit stays honest.",
     "latestTitle": "Latest note",
     "allNotes": "Read all notes"
   },
   "experience": {
     "title": "Experience",
-    "intro": "Five years of building web platforms, from financial services to a volunteer non-profit project.",
+    "intro": "Five years building production web platforms, from regulated financial services to a cross-platform non-profit product.",
     "rolesTitle": "Roles",
     "skillsTitle": "Skills",
     "spokenTitle": "Spoken languages",
@@ -51,11 +51,11 @@
   },
   "learning": {
     "title": "Learning",
-    "intro": "Growing as a developer is part of the job. This page shows how: what I'm studying, what I write down, and what I've earned.",
+    "intro": "Growth is part of the job, and part of the fun. Here's what I'm studying, the notes I write along the way, and the credentials I've earned so far, with my P.Eng. next.",
     "since": "Since {date}",
     "credentialsTitle": "Education and certifications",
-    "notesTitle": "Learning notes",
-    "notesIntro": "Short write-ups of what I tried, what surprised me and what I'll do differently."
+    "notesTitle": "Notes",
+    "notesIntro": "Short reflections on what I tried, read or made, and what I'll carry into the next project."
   },
   "credentials": {
     "current": "Current",
@@ -69,7 +69,7 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "The fastest way to reach me is email. I read every message.",
+    "intro": "Have a project, a role or a good book recommendation? Email is the fastest way to reach me, and I reply to every message.",
     "emailMe": "Email Raven-Lee",
     "copy": "Copy email address",
     "copied": "Email address copied",
@@ -106,15 +106,15 @@
     "imageAlt": "Raven-Lee Mills, full-stack developer, with a cluster of pink flower blooms",
     "home": {
       "title": "Raven-Lee Mills, full-stack developer in Ottawa",
-      "description": "Full-stack developer in Ottawa with five years of experience and a habit of learning something new every week."
+      "description": "Full-stack developer in Ottawa with five years of production experience, growing toward P.Eng. licensure and senior full-stack work."
     },
     "experience": {
       "title": "Experience {'|'} Raven-Lee Mills",
-      "description": "Roles, skills and languages: five years building web platforms with React, Next.js, Python and PostgreSQL."
+      "description": "Five years building web platforms with React, Next.js, Python and PostgreSQL: roles, skills and languages."
     },
     "learning": {
       "title": "Learning {'|'} Raven-Lee Mills",
-      "description": "What Raven-Lee Mills is studying now, plus education, certifications and learning notes."
+      "description": "What Raven-Lee Mills is studying now, learning notes, and the education and certifications on the path to P.Eng."
     },
     "resume": {
       "title": "Résumé {'|'} Raven-Lee Mills",

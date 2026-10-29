@@ -3,25 +3,30 @@ import { execFileSync } from "node:child_process";
 import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { BLUSH_SCALE, SAKURA_PETAL, stamens } from "../shared/utils/blossom.ts";
 
 const chrome = process.env.CHROME ?? "google-chrome";
 const pub = join(import.meta.dirname, "../public");
 const work = mkdtempSync(join(tmpdir(), "assets-"));
-const petal = "M0 0C-17 -12 -17 -40 0 -52C17 -40 17 -12 0 0Z";
-
-const bloom = (x, y, s, n, turn = 0) =>
+// The hero's sakura blossom, in fixed colours for the dark OG card.
+const bloom = (x, y, s, turn = 0) =>
   `<g transform="translate(${x} ${y}) scale(${s})">${Array.from(
-    { length: n },
+    { length: 5 },
     (_, i) =>
-      `<path d="${petal}" transform="rotate(${turn + (360 / n) * i})" fill="${i % 2 ? "#c13a78" : "#e0679a"}"/>`,
-  ).join("")}<circle r="9" fill="#f6c64d"/></g>`;
+      `<g transform="rotate(${turn + 72 * i})"><path d="${SAKURA_PETAL}" fill="#e0679a"/><path d="${SAKURA_PETAL}" transform="scale(${BLUSH_SCALE})" fill="#c13a78" opacity="0.6"/></g>`,
+  ).join("")}<circle r="7" fill="#c13a78"/>${stamens(10, 5, 15)
+    .map(
+      (l) =>
+        `<line x1="${l.x1}" y1="${l.y1}" x2="${l.x2}" y2="${l.y2}" stroke="#8e2b54" stroke-width="1.4" stroke-linecap="round"/><circle cx="${l.x2}" cy="${l.y2}" r="1.8" fill="#f6c64d"/>`,
+    )
+    .join("")}</g>`;
 
 const og = `<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght,SOFT,WONK@0,600,100,1&family=Be+Vietnam+Pro:wght@500&display=swap">
 <style>*{margin:0}body{width:1200px;height:630px;background:#241520;position:relative;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif}
 h1{position:absolute;left:84px;top:200px;font:600 100px/1.05 Fraunces,serif;color:#f8eef3;width:620px}
 p{position:absolute;left:88px;top:430px;font-size:36px;color:#f3a6c6;width:600px;line-height:1.35}svg{position:absolute;right:0;top:0}</style>
 <h1>Raven-Lee Mills</h1><p>Full-stack developer in Ottawa. Always learning.</p>
-<svg width="560" height="630" viewBox="0 0 560 630">${bloom(330, 270, 3.4, 9)}${bloom(130, 150, 1.9, 7, 20)}${bloom(470, 520, 1.6, 6, 10)}${bloom(120, 490, 1.1, 6)}</svg>`;
+<svg width="560" height="630" viewBox="0 0 560 630">${bloom(330, 270, 3.4)}${bloom(130, 150, 1.9, 20)}${bloom(470, 520, 1.6, 10)}${bloom(120, 490, 1.1)}</svg>`;
 
 const icon = `<!doctype html><style>*{margin:0}body{width:180px;height:180px;background:#fdf7f9}</style><body>${readFileSync(join(pub, "favicon.svg"), "utf8").replace("<svg ", '<svg width="180" height="180" ')}`;
 const ico = `<!doctype html><style>*{margin:0}body{width:48px;height:48px;background:transparent}</style><body>${readFileSync(join(pub, "favicon.svg"), "utf8").replace("<svg ", '<svg width="48" height="48" ')}`;

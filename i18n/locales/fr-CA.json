@@ -29,21 +29,21 @@
   },
   "hero": {
     "role": "Développement full-stack à Ottawa",
-    "tagline": "{count} ans d’expérience, et j’apprends encore chaque semaine.",
-    "email": "Écrire à Raven-Lee",
+    "tagline": "{count} ans à créer pour le Web, et encore beaucoup à apprendre, au clavier comme ailleurs.",
+    "email": "Écrivez-moi",
     "learning": "Voir ce que j’apprends"
   },
   "home": {
     "aboutTitle": "À propos",
     "seeExperience": "Voir mon expérience",
     "nowTitle": "J’apprends en ce moment",
-    "nowIntro": "Je tiens une courte liste datée de ce que j’étudie, pour que l’habitude reste honnête.",
+    "nowIntro": "Ce que j’apprends en ce moment, des nouveaux outils à un savoir-faire artisanal ou un bon livre. Chaque entrée est datée, pour que l’habitude reste honnête.",
     "latestTitle": "Dernière note",
     "allNotes": "Lire toutes les notes"
   },
   "experience": {
     "title": "Expérience",
-    "intro": "Cinq ans à créer des plateformes web, des services financiers à un projet bénévole sans but lucratif.",
+    "intro": "Cinq ans à créer des plateformes web en production, des services financiers réglementés à un produit multiplateforme pour un organisme sans but lucratif.",
     "rolesTitle": "Postes",
     "skillsTitle": "Compétences",
     "spokenTitle": "Langues parlées",
@@ -51,11 +51,11 @@
   },
   "learning": {
     "title": "Apprentissage",
-    "intro": "Progresser fait partie du métier. Cette page montre comment : ce que j’étudie, ce que je consigne et ce que j’ai obtenu.",
+    "intro": "Progresser fait partie du métier, et du plaisir. Voici ce que j’étudie, les notes que je prends en chemin et les titres obtenus jusqu’ici; prochaine étape : mon titre d’ing.",
     "since": "Depuis {date}",
     "credentialsTitle": "Formation et certifications",
-    "notesTitle": "Notes d’apprentissage",
-    "notesIntro": "De courts textes sur ce que j’ai essayé, ce qui m’a surpris et ce que je ferai autrement."
+    "notesTitle": "Notes",
+    "notesIntro": "De courtes réflexions sur ce que j’ai essayé, lu ou fabriqué, et sur ce que j’apporterai au prochain projet."
   },
   "credentials": {
     "current": "En cours",
@@ -69,7 +69,7 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Le moyen le plus rapide de me joindre est le courriel. Je lis chaque message.",
+    "intro": "Un projet, un poste ou une bonne suggestion de lecture? Le courriel est le moyen le plus rapide de me joindre, et je réponds à chaque message.",
     "emailMe": "Écrire à Raven-Lee",
     "copy": "Copier l’adresse courriel",
     "copied": "Adresse courriel copiée",
@@ -106,15 +106,15 @@
     "imageAlt": "Raven-Lee Mills, développement full-stack, avec un bouquet de fleurs roses",
     "home": {
       "title": "Raven-Lee Mills, développement full-stack à Ottawa",
-      "description": "Développement full-stack à Ottawa : cinq ans d’expérience et l’habitude d’apprendre quelque chose de nouveau chaque semaine."
+      "description": "Développement full-stack à Ottawa, avec cinq ans d’expérience en production, en route vers le titre d’ing. et un rôle full-stack senior."
     },
     "experience": {
       "title": "Expérience {'|'} Raven-Lee Mills",
-      "description": "Postes, compétences et langues : cinq ans à créer des plateformes web avec React, Next.js, Python et PostgreSQL."
+      "description": "Cinq ans à créer des plateformes web avec React, Next.js, Python et PostgreSQL : postes, compétences et langues."
     },
     "learning": {
       "title": "Apprentissage {'|'} Raven-Lee Mills",
-      "description": "Ce que Raven-Lee Mills étudie en ce moment, avec sa formation, ses certifications et ses notes d’apprentissage."
+      "description": "Ce que Raven-Lee Mills étudie en ce moment, ses notes d’apprentissage, ainsi que la formation et les certifications sur la voie du titre d’ing."
     },
     "resume": {
       "title": "CV {'|'} Raven-Lee Mills",

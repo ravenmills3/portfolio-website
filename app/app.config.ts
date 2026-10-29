@@ -10,7 +10,7 @@ export default defineAppConfig({
       error: "poppy",
       neutral: "plum",
     },
-    // Pill-shaped controls suit the petals; 44px minimum targets as policy (WCAG 2.5.8).
+    // Pill-shaped with 44px minimum targets
     button: {
       slots: { base: "rounded-full min-h-11 min-w-11 justify-center" },
     },

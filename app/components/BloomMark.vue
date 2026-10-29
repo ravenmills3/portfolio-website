@@ -1,21 +1,26 @@
 <script setup lang="ts">
-// The favicon blossom: five round petals on the wallpaper's ring geometry.
-const petals = Array.from({ length: 5 }, (_, i) => {
-  const rad = ((-90 + i * 72) * Math.PI) / 180;
-  return [16 + 7 * Math.cos(rad), 16 + 7 * Math.sin(rad)] as const;
-});
+const petals = markPetals();
+const dots = markStamens();
+const centre = MARK.size / 2;
 </script>
 
 <template>
   <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-    <circle
-      v-for="([x, y], i) in petals"
+    <path
+      v-for="(transform, i) in petals"
       :key="i"
-      :cx="x"
-      :cy="y"
-      r="5"
+      :transform="transform"
+      :d="SAKURA_PETAL"
       fill="var(--mark-petal)"
     />
-    <circle cx="16" cy="16" r="2.8" fill="var(--mark-bloom)" />
+    <circle :cx="centre" :cy="centre" :r="MARK.core" fill="var(--mark-bloom)" />
+    <circle
+      v-for="([x, y], i) in dots"
+      :key="`s${i}`"
+      :cx="x"
+      :cy="y"
+      :r="MARK.stamens.r"
+      fill="var(--mark-bloom)"
+    />
   </svg>
 </template>

@@ -5,9 +5,11 @@ test("contact links point to the right places", async ({ page }) => {
   await page.goto("/contact");
   await ready(page);
   const main = page.getByRole("main");
-  await expect(
-    main.getByRole("link", { name: "Email Raven-Lee" }),
-  ).toHaveAttribute("href", "mailto:ravenleemills@gmail.com");
+  const mail = main.locator("a[href^='mailto:']");
+  await expect(mail).toHaveCount(1);
+  await expect(mail).toHaveText("ravenleemills@gmail.com");
+  await expect(mail).toHaveAttribute("href", "mailto:ravenleemills@gmail.com");
+  expect((await mail.boundingBox())!.height).toBeGreaterThanOrEqual(44);
   await expect(main.getByRole("link", { name: /GitHub/ })).toHaveAttribute(
     "href",
     "https://github.com/ravenmills3",
